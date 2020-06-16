@@ -12,6 +12,11 @@ type Storage struct {
 	s *mgo.Session
 }
 
+func NewStorage() (*Storage, error) {
+	var s *Storage
+	return s, nil
+}
+
 //AddCreator saves creator to repository
 func (ss *Storage) AddCreator(c adding.Creator) error {
 	var err error

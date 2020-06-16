@@ -4,6 +4,7 @@ import "log"
 
 type Service interface {
 	AddCreator(c ...Creator) error
+	CheckHealth() string
 }
 
 type Repository interface {
@@ -12,6 +13,15 @@ type Repository interface {
 
 type service struct {
 	r Repository
+}
+
+// NewService creates an adding service with the necessary dependencies
+func NewService(r Repository) Service {
+	return &service{r}
+}
+
+func (s *service) CheckHealth() string {
+	return "Go Skeleton is OK"
 }
 
 func (s *service) AddCreator(c ...Creator) error {
