@@ -1,9 +1,9 @@
 # Go Skeleton
 
-##cmd
+### /cmd
 
-##configs
+### /configs
 
-##internal
+### /internal
 
-##pkg
+### /pkg
